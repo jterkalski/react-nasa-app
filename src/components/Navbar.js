@@ -9,13 +9,13 @@ const Navbar = () => {
                     <img src='./orbit.svg' />
                 </NavbarBs.Brand>
                 <Nav className='me-auto'>
-                    <Nav.Link to='/apod' as={NavLink} className='ms-2'>
+                    <Nav.Link to='/apod' as={NavLink} className='ms-2 m-auto'>
                         Picture of the Day
                     </Nav.Link>
-                    <Nav.Link to='/mars_photos' as={NavLink} className='ms-2'>
+                    <Nav.Link to='/mars_photos' as={NavLink} className='ms-2 m-auto'>
                         Mars Rover Photos
                     </Nav.Link>
-                    <Nav.Link to='/mars_weather' as={NavLink} className='ms-2'>
+                    <Nav.Link to='/mars_weather' as={NavLink} className='ms-2 m-auto'>
                         Weather on Mars
                     </Nav.Link>
                 </Nav>

@@ -1,12 +1,18 @@
 import { useState, useEffect } from 'react';
+import { Button } from 'react-bootstrap';
 import axios from 'axios';
 import ApodCard from '../components/ApodCard';
+import ApodModal from '../components/ApodModal';
 
 // Astronomy picture of the day
 
 const Apod = () => {
     const [loading, setLoading] = useState(true);
     const [apodData, setApodData] = useState();
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     // NASA api key generated on: https://api.nasa.gov/
     const apiKey = 'wq5ELeUZXIYmD9e0Ad8NsY5XACyEnkwe3JdsuyF6';
@@ -31,8 +37,6 @@ const Apod = () => {
         fetchApod();
     }, []);
 
-    console.log(loading, apodData);
-
     return (
         <div className='d-flex flex-column'>
             {loading ? (
@@ -40,6 +44,14 @@ const Apod = () => {
             ) : (
                 <div className='mt-3 align-self-center'>
                     <ApodCard data={apodData} />
+                    <Button
+                        variant='outline-secondary'
+                        className='m-3 me-0 float-sm-end'
+                        onClick={handleShow}
+                    >
+                        More pictures...
+                    </Button>
+                    <ApodModal show={show} onHide={handleClose} />
                 </div>
             )}
         </div>
