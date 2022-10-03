@@ -12,11 +12,11 @@ const Navbar = () => {
                     <Nav.Link to='/apod' as={NavLink} className='ms-2'>
                         Picture of the Day
                     </Nav.Link>
-                    <Nav.Link to='/mars_weather' as={NavLink} className='ms-2'>
-                        Weather on Mars
-                    </Nav.Link>
                     <Nav.Link to='/mars_photos' as={NavLink} className='ms-2'>
                         Mars Rover Photos
+                    </Nav.Link>
+                    <Nav.Link to='/mars_weather' as={NavLink} className='ms-2'>
+                        Weather on Mars
                     </Nav.Link>
                 </Nav>
             </Container>

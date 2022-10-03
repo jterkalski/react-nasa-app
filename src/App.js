@@ -8,7 +8,7 @@ import MarsWeather from './pages/MarsWeather';
 
 const App = () => {
     return (
-        <>
+        <div style={{ width: '100%' }}>
             <Navbar />
             <Container className='mb-4'>
                 <Routes>
@@ -18,7 +18,7 @@ const App = () => {
                     <Route path='/mars_weather' element={<MarsWeather />} />
                 </Routes>
             </Container>
-        </>
+        </div>
     );
 };
 

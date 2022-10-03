@@ -4,10 +4,10 @@ const ApodCard = ({ data }) => {
     return (
         <Container>
             <Row>
-                <Col xs={9} className='mb-2'>
+                <Col md={9} className='mb-2'>
                     <h2>{data.title}</h2>
                 </Col>
-                <Col xs={3} className='text-end'>
+                <Col md={3} className='text-end d-none d-md-block'>
                     <div>{data.date}</div>
                 </Col>
             </Row>
@@ -15,7 +15,7 @@ const ApodCard = ({ data }) => {
                 <Col className='bg-white shadow-sm mb-3 rounded'>
                     <img
                         src={data.url}
-                        style={{ height: '60vh' }}
+                        style={{ maxHeight: '55vh', maxWidth: '90vw' }}
                         className='d-block mx-auto'
                     />
                 </Col>
