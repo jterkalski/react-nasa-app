@@ -10,13 +10,13 @@ const Navbar = () => {
                 </NavbarBs.Brand>
                 <Nav className='me-auto'>
                     <Nav.Link to='/apod' as={NavLink} className='ms-2'>
-                        Picture of the day
+                        Picture of the Day
                     </Nav.Link>
                     <Nav.Link to='/mars_weather' as={NavLink} className='ms-2'>
                         Weather on Mars
                     </Nav.Link>
                     <Nav.Link to='/mars_photos' as={NavLink} className='ms-2'>
-                        Mars rover photos
+                        Mars Rover Photos
                     </Nav.Link>
                 </Nav>
             </Container>
