@@ -1,14 +1,15 @@
 import { Container, Row, Col } from 'react-bootstrap';
+import ApodSelect from './ApodSelect';
 
-const ApodCard = ({ data }) => {
+const ApodCard = ({ data, onChange }) => {
     return (
         <Container>
             <Row>
-                <Col md={9} className='mb-2'>
+                <Col md={10} className='mb-2'>
                     <h2>{data.title}</h2>
                 </Col>
-                <Col md={3} className='text-end d-none d-md-block'>
-                    <div>{data.date}</div>
+                <Col md={2} className='text-end d-none d-md-block'>
+                    <ApodSelect date={data.date} onChange={onChange} />
                 </Col>
             </Row>
             <Row>
@@ -17,6 +18,7 @@ const ApodCard = ({ data }) => {
                         src={data.url}
                         style={{ maxHeight: '55vh', maxWidth: '90vw' }}
                         className='d-block mx-auto'
+                        alt={data.title}
                     />
                 </Col>
             </Row>

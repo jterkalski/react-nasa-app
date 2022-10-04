@@ -3,12 +3,14 @@ import { Button } from 'react-bootstrap';
 import axios from 'axios';
 import ApodCard from '../components/ApodCard';
 import ApodModal from '../components/ApodModal';
+import { getIso8601Date } from '../utilities/utilities';
 
 // Astronomy picture of the day
 
 const Apod = () => {
     const [loading, setLoading] = useState(true);
     const [apodData, setApodData] = useState();
+    const [date, setDate] = useState(getIso8601Date(new Date()));
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -24,6 +26,7 @@ const Apod = () => {
                 const res = await axios.get('https://api.nasa.gov/planetary/apod', {
                     params: {
                         api_key: apiKey,
+                        date: date,
                     },
                 });
                 if (res?.status === 200) {
@@ -35,7 +38,7 @@ const Apod = () => {
             }
         };
         fetchApod();
-    }, []);
+    }, [date]);
 
     return (
         <div className='d-flex flex-column'>
@@ -43,7 +46,7 @@ const Apod = () => {
                 <div>Loading...</div>
             ) : (
                 <div className='mt-3 align-self-center'>
-                    <ApodCard data={apodData} />
+                    <ApodCard data={apodData} onChange={(newDate) => setDate(newDate)} />
                     <Button
                         variant='outline-secondary'
                         className='m-3 me-0 float-sm-end'
