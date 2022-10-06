@@ -1,7 +1,12 @@
 import React from 'react';
+import MarsPhotosConfiguration from '../components/MarsPhotosConfiguration';
 
 const MarsPhotos = () => {
-    return <div>Work in progress...</div>;
+    return (
+        <div>
+            <MarsPhotosConfiguration />
+        </div>
+    );
 };
 
 export default MarsPhotos;
