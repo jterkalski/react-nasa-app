@@ -33,7 +33,8 @@ const ApodCard = ({ data, onChange, isPicture }) => {
                             }}
                             className='d-block mx-auto'
                             alt={data.title}
-                        ></iframe>
+                            allow='fullscreen'
+                        />
                     )}
                 </Col>
             </Row>
