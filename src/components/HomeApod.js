@@ -1,6 +1,8 @@
 import { Card } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import PulseLoader from 'react-spinners/PulseLoader';
+import Loader from './Loader';
 
 const HomeApod = () => {
     const [loading, setLoading] = useState(true);
@@ -14,7 +16,7 @@ const HomeApod = () => {
         setIsPicture(true);
         const fetchApod = async () => {
             try {
-                // setLoading(true);
+                setLoading(true);
                 const res = await axios.get('https://api.nasa.gov/planetary/apod', {
                     params: {
                         api_key: apiKey,
@@ -36,7 +38,7 @@ const HomeApod = () => {
     return (
         <div>
             {loading ? (
-                <div>loading...</div>
+                <Loader loading={loading} />
             ) : (
                 <Card style={{ width: '30rem', maxWidth: '80vw' }}>
                     {isPicture ? (

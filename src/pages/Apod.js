@@ -4,6 +4,7 @@ import axios from 'axios';
 import ApodCard from '../components/ApodCard';
 import ApodModal from '../components/ApodModal';
 import { getIso8601Date } from '../utilities/utilities';
+import Loader from '../components/Loader';
 
 // Astronomy picture of the day
 
@@ -24,7 +25,7 @@ const Apod = () => {
         setIsPicture(true);
         const fetchApod = async () => {
             try {
-                // setLoading(true);
+                setLoading(true);
                 const res = await axios.get('https://api.nasa.gov/planetary/apod', {
                     params: {
                         api_key: apiKey,
@@ -47,7 +48,7 @@ const Apod = () => {
     return (
         <div className='d-flex flex-column'>
             {loading ? (
-                <div>Loading...</div>
+                <Loader loading={loading} />
             ) : (
                 <div className='mt-3 align-self-center'>
                     <ApodCard
