@@ -1,7 +1,6 @@
 import { Card } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import PulseLoader from 'react-spinners/PulseLoader';
 import Loader from './Loader';
 
 const HomeApod = () => {

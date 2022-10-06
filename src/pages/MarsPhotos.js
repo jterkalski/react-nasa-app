@@ -1,10 +1,10 @@
 import React from 'react';
-import MarsPhotosConfiguration from '../components/MarsPhotosConfiguration';
+import MPConfiguration from '../components/MPConfiguration';
 
 const MarsPhotos = () => {
     return (
         <div>
-            <MarsPhotosConfiguration />
+            <MPConfiguration />
         </div>
     );
 };
