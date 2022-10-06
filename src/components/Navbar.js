@@ -15,9 +15,6 @@ const Navbar = () => {
                     <Nav.Link to='/mars_photos' as={NavLink} className='ms-2 m-auto'>
                         Mars Rover Photos
                     </Nav.Link>
-                    <Nav.Link to='/mars_weather' as={NavLink} className='ms-2 m-auto'>
-                        Weather on Mars
-                    </Nav.Link>
                 </Nav>
             </Container>
         </NavbarBs>

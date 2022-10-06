@@ -25,10 +25,10 @@ const ApodCard = ({ data, onChange, isPicture }) => {
                         <iframe
                             src={data.url}
                             style={{
-                                width: '60vw',
-                                maxWidth: '90vw',
                                 height: '50vh',
+                                maxWidth: '90vw',
                                 maxHeight: '55vh',
+                                aspectRatio: '16 / 9',
                             }}
                             className='d-block mx-auto'
                             alt={data.title}
