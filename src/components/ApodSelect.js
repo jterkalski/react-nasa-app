@@ -6,14 +6,12 @@ const ApodSelect = ({ date, onChange }) => {
     const [dates, setDates] = useState();
     const selectRef = useRef();
 
+    // generate dates (last 7 days)
     useEffect(() => {
         let tmp = [];
-
-        for (let i = 0; i < 7; ++i) {
-            tmp[i] = getIso8601Date(subtractDays(date, i));
-        }
-
+        for (let i = 0; i < 7; ++i) tmp[i] = getIso8601Date(subtractDays(date, i));
         setDates(tmp);
+        // eslint-disable-next-line
     }, []);
 
     return (
@@ -21,6 +19,7 @@ const ApodSelect = ({ date, onChange }) => {
             aria-label='Default select example'
             ref={selectRef}
             onChange={(e) => onChange(e.target.value)}
+            style={{ boxShadow: 'none' }}
         >
             {dates?.map((x, index) => (
                 <option key={index} value={x}>

@@ -31,6 +31,7 @@ const Apod = () => {
                 });
                 if (res?.status === 200) {
                     setApodData(res.data);
+                    console.log(res.data);
                     setLoading(false);
                 }
             } catch (e) {
