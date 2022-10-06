@@ -24,6 +24,7 @@ const ApodCard = ({ data, onChange, isPicture }) => {
                     ) : (
                         <iframe
                             src={data.url}
+                            title={data.url}
                             style={{
                                 height: '50vh',
                                 maxWidth: '90vw',

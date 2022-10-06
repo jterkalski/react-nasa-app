@@ -1,7 +1,7 @@
 import React from 'react';
 
 const MarsPhotos = () => {
-    return <div>MarsPhotos</div>;
+    return <div>Work in progress...</div>;
 };
 
 export default MarsPhotos;
