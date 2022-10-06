@@ -1,7 +1,7 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import ApodSelect from './ApodSelect';
 
-const ApodCard = ({ data, onChange }) => {
+const ApodCard = ({ data, onChange, isPicture }) => {
     return (
         <Container>
             <Row>
@@ -14,12 +14,26 @@ const ApodCard = ({ data, onChange }) => {
             </Row>
             <Row>
                 <Col className='bg-white shadow-sm mb-3 rounded'>
-                    <img
-                        src={data.url}
-                        style={{ maxHeight: '55vh', maxWidth: '90vw' }}
-                        className='d-block mx-auto'
-                        alt={data.title}
-                    />
+                    {isPicture ? (
+                        <img
+                            src={data.url}
+                            style={{ maxHeight: '55vh', maxWidth: '90vw' }}
+                            className='d-block mx-auto'
+                            alt={data.title}
+                        />
+                    ) : (
+                        <iframe
+                            src={data.url}
+                            style={{
+                                width: '60vw',
+                                maxWidth: '90vw',
+                                height: '50vh',
+                                maxHeight: '55vh',
+                            }}
+                            className='d-block mx-auto'
+                            alt={data.title}
+                        ></iframe>
+                    )}
                 </Col>
             </Row>
             <Row>

@@ -12,6 +12,7 @@ const Apod = () => {
     const [apodData, setApodData] = useState();
     const [date, setDate] = useState(getIso8601Date(new Date()));
     const [show, setShow] = useState(false);
+    const [isPicture, setIsPicture] = useState(true);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -20,6 +21,7 @@ const Apod = () => {
     const apiKey = 'wq5ELeUZXIYmD9e0Ad8NsY5XACyEnkwe3JdsuyF6';
 
     useEffect(() => {
+        setIsPicture(true);
         const fetchApod = async () => {
             try {
                 // setLoading(true);
@@ -31,7 +33,8 @@ const Apod = () => {
                 });
                 if (res?.status === 200) {
                     setApodData(res.data);
-                    console.log(res.data);
+                    if (res.data.url.includes('https://www.youtube.com/'))
+                        setIsPicture(false);
                     setLoading(false);
                 }
             } catch (e) {
@@ -47,7 +50,11 @@ const Apod = () => {
                 <div>Loading...</div>
             ) : (
                 <div className='mt-3 align-self-center'>
-                    <ApodCard data={apodData} onChange={(newDate) => setDate(newDate)} />
+                    <ApodCard
+                        data={apodData}
+                        onChange={(newDate) => setDate(newDate)}
+                        isPicture={isPicture}
+                    />
                     <Button
                         variant='outline-secondary'
                         className='m-3 me-0 float-sm-end'
