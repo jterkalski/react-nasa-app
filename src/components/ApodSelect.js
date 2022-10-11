@@ -6,7 +6,7 @@ const ApodSelect = ({ date, onChange }) => {
     const [dates, setDates] = useState();
     const selectRef = useRef();
 
-    // generate dates (last 7 days)
+    // generate 7 days
     useEffect(() => {
         let tmp = [];
         for (let i = 0; i < 7; ++i) tmp[i] = getIso8601Date(subtractDays(date, i));

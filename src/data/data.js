@@ -1,3 +1,6 @@
+// NASA api key generated on: https://api.nasa.gov/
+export const apiKey = 'wq5ELeUZXIYmD9e0Ad8NsY5XACyEnkwe3JdsuyF6';
+
 // MartianPhotos camera types
 export const cameraTypes = [
     { id: 1, value: 'FHAZ', name: 'Front Hazard Avoidance Camera' },

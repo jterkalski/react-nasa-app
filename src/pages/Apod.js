@@ -5,6 +5,7 @@ import ApodCard from '../components/ApodCard';
 import ApodModal from '../components/ApodModal';
 import { getIso8601Date } from '../utilities/utilities';
 import Loader from '../components/Loader';
+import { apiKey } from '../data/data';
 
 // Astronomy picture of the day
 
@@ -17,9 +18,6 @@ const Apod = () => {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
-    // NASA api key generated on: https://api.nasa.gov/
-    const apiKey = 'wq5ELeUZXIYmD9e0Ad8NsY5XACyEnkwe3JdsuyF6';
 
     useEffect(() => {
         setIsPicture(true);

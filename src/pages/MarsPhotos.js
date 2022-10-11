@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import MPConfiguration from '../components/MPConfiguration';
+import MPConfigBar from '../components/MPConfigBar';
 
 const MarsPhotos = () => {
     const [camera, setCamera] = useState();
@@ -8,7 +8,7 @@ const MarsPhotos = () => {
 
     return (
         <div>
-            <MPConfiguration
+            <MPConfigBar
                 setCamera={(newCamera) => setCamera(newCamera)}
                 setSol={(newSol) => setSol(newSol)}
                 setPage={(newPage) => setPage(newPage)}

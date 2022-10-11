@@ -4,6 +4,7 @@ import { Container } from 'react-bootstrap';
 import Home from './pages/Home';
 import Apod from './pages/Apod';
 import MarsPhotos from './pages/MarsPhotos';
+import Asteroids from './pages/Asteroids';
 
 const App = () => {
     return (
@@ -13,6 +14,7 @@ const App = () => {
                 <Routes>
                     <Route path='/' element={<Home />} />
                     <Route path='/apod' element={<Apod />} />
+                    <Route path='/asteroids' element={<Asteroids />} />
                     <Route path='/mars_photos' element={<MarsPhotos />} />
                 </Routes>
             </Container>

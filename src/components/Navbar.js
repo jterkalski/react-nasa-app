@@ -12,6 +12,9 @@ const Navbar = () => {
                     <Nav.Link to='/apod' as={NavLink} className='ms-2 m-auto'>
                         Astronomy Picture of the Day
                     </Nav.Link>
+                    <Nav.Link to='/asteroids' as={NavLink} className='ms-2 m-auto'>
+                        Asteroids
+                    </Nav.Link>
                     <Nav.Link to='/mars_photos' as={NavLink} className='ms-3 m-auto'>
                         Mars Rover Photos
                     </Nav.Link>
