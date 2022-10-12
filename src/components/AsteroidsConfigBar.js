@@ -1,7 +1,8 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import AsteroidsPagination from './AsteroidsPagination';
 
-const AsteroidsConfigBar = () => {
+const AsteroidsConfigBar = ({ page, totalPages, onPageClick }) => {
+    // debugger;
     return (
         <Container className='p-3'>
             <Row
@@ -18,7 +19,11 @@ const AsteroidsConfigBar = () => {
                     <div>Date end</div>
                 </Col>
                 <Col>
-                    <AsteroidsPagination />
+                    <AsteroidsPagination
+                        page={page}
+                        totalPages={totalPages}
+                        onPageClick={onPageClick}
+                    />
                 </Col>
             </Row>
         </Container>
