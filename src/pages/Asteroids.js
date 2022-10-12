@@ -6,7 +6,7 @@ import axios from 'axios';
 import Loader from '../components/Loader';
 
 const Asteroids = () => {
-    const [loading, setLoading] = useState();
+    const [loading, setLoading] = useState(true);
     const [asteroidsData, setAsteroidsData] = useState();
     const [totalPages, setTotalPages] = useState();
     const [page, setPage] = useState(0);

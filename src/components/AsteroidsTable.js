@@ -11,18 +11,15 @@ const AsteroidsTable = ({ asteroidsData }) => {
                 </tr>
             </thead>
             <tbody>
-                {asteroidsData &&
-                    asteroidsData.map((asteroid) => (
-                        <tr>
-                            <td>{asteroid.id}</td>
-                            <td>{asteroid.name}</td>
-                            <td>
-                                {JSON.stringify(
-                                    asteroid.is_potentially_hazardous_asteroid
-                                )}
-                            </td>
-                        </tr>
-                    ))}
+                {asteroidsData.map((asteroid) => (
+                    <tr key={asteroid.id}>
+                        <td>{asteroid.id}</td>
+                        <td>{asteroid.name_limited}</td>
+                        <td>
+                            {asteroid.is_potentially_hazardous_asteroid ? 'Yes' : 'No'}
+                        </td>
+                    </tr>
+                ))}
             </tbody>
         </Table>
     );
