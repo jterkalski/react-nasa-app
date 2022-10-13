@@ -1,9 +1,11 @@
+// helper function for ApodSelect
 export const subtractDays = (date, days) => {
     let result = new Date(date);
     result.setDate(result.getDate() - days);
     return result;
 };
 
+// helper function for ApodSelect and ApodForm
 export const getIso8601Date = (date) => {
     if (date == null) date = new Date();
 
@@ -17,13 +19,13 @@ export const getIso8601Date = (date) => {
     return year + '-' + month + '-' + day;
 };
 
-// pagination range:
+// // helper function for AsteroidsPagination
 export const calculateRange = (pageNumber, pagesCount, radiusSize) => {
     const start = pageNumber - radiusSize;
-    if (start < 1) {
+    if (start < 0) {
         return {
-            start: 1,
-            stop: Math.min(2 * radiusSize + 1, pagesCount),
+            start: 0,
+            stop: Math.min(2 * radiusSize, pagesCount),
         };
     }
     const stop = pageNumber + radiusSize;

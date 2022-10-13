@@ -14,13 +14,13 @@ const AsteroidsPagination = ({ page, totalPages, onPageClick }) => {
                 active={i === page}
                 onClick={() => onPageClick(i)}
             >
-                {i}
+                {i + 1}
             </Pagination.Item>
         );
     }
 
     const handleClickFirst = () => {
-        onPageClick(1);
+        onPageClick(0);
     };
     const handleClickLast = () => {
         onPageClick(totalPages);

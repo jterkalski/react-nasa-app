@@ -9,7 +9,7 @@ const Asteroids = () => {
     const [loading, setLoading] = useState(true);
     const [asteroidsData, setAsteroidsData] = useState();
     const [totalPages, setTotalPages] = useState();
-    const [page, setPage] = useState(1);
+    const [page, setPage] = useState(0);
 
     useEffect(() => {
         const fetchAsteroids = async () => {
@@ -38,7 +38,6 @@ const Asteroids = () => {
 
     const handlePageClick = (page) => {
         setPage(page);
-        console.log(page);
     };
 
     return (

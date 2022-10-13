@@ -13,7 +13,7 @@ const Home = () => {
             <Row>
                 <Col>
                     <Nav.Link to='/apod' as={NavLink} className='ms-2 m-auto'>
-                        <h4>See the Astronomy Picture of the Day</h4>
+                        <h4>Astronomy Picture of the Day</h4>
                         <HomeApod />
                     </Nav.Link>
                 </Col>

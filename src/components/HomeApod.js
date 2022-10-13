@@ -39,12 +39,20 @@ const HomeApod = () => {
             {loading ? (
                 <Loader loading={loading} />
             ) : (
-                <Card style={{ width: '30rem', maxWidth: '80vw' }}>
+                <Card
+                    style={{
+                        width: '21rem',
+                    }}
+                >
                     {isPicture ? (
                         <Card.Img
                             variant='top'
                             src={data.url}
-                            style={{ maxHeight: '50vh' }}
+                            style={{
+                                width: '100%',
+                                aspectRatio: 1 / 1,
+                                objectFit: 'cover',
+                            }}
                         />
                     ) : (
                         <div>Today's picture is actually a video</div>

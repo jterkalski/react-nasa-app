@@ -14,7 +14,7 @@ const Apod = () => {
     const [apodData, setApodData] = useState();
     const [date, setDate] = useState(getIso8601Date(new Date()));
     const [show, setShow] = useState(false);
-    const [isPicture, setIsPicture] = useState(true); // can be a YouTube video
+    const [isPicture, setIsPicture] = useState(true); // turned out it can be a YouTube video
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
