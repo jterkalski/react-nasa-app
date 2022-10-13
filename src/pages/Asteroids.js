@@ -26,7 +26,7 @@ const Asteroids = () => {
                 );
                 if (res?.status === 200) {
                     setAsteroidsData(res.data.near_earth_objects);
-                    setTotalPages(res.data.page.total_pages);
+                    setTotalPages(res.data.page.total_pages - 1);
                     setLoading(false);
                 }
             } catch (e) {
