@@ -9,7 +9,11 @@
 
 ### 1. Astronomy Picture of the Day
 
-![app-logo](public/images/APOD.png 'React-Nasa-App Banner')
+![app-logo](public/images/APOD.png 'APOD Page')
+
+### 2. Asteroids
+
+![app-logo](public/images/Asteroids.png 'Asteroids Page')
 
 ## How To Use
 

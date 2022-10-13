@@ -3,7 +3,7 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
 
 const tooltipText =
-    'A potentially hazardous object is a near-Earth object with an orbit that can make close approaches to the Earth and is large enough to cause significant regional damage in the event of impact.';
+    'Near-Earth object with an orbit that can make close approaches to the Earth and is large enough to cause significant regional damage in the event of impact.';
 
 const TooltipPositionedExample = () => {
     return (
@@ -11,7 +11,10 @@ const TooltipPositionedExample = () => {
             key='bottom'
             placement='bottom'
             overlay={
-                <Tooltip id={`tooltip-bottom`} style={{ marginTop: '15px' }}>
+                <Tooltip
+                    id={`tooltip-bottom`}
+                    style={{ width: '150px', marginTop: '15px' }}
+                >
                     {tooltipText}
                 </Tooltip>
             }
