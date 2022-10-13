@@ -42,7 +42,7 @@ const Asteroids = () => {
     };
 
     return (
-        <div>
+        <div className='pb-2'>
             <AsteroidsConfigBar
                 page={page}
                 totalPages={totalPages}

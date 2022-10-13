@@ -27,7 +27,7 @@ const AsteroidsPagination = ({ page, totalPages, onPageClick }) => {
     };
 
     return (
-        <Pagination>
+        <Pagination className='mt-2 justify-content-end'>
             <Pagination.First onClick={handleClickFirst} />
 
             {items}

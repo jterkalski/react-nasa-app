@@ -4,7 +4,7 @@ import AsteroidsPagination from './AsteroidsPagination';
 const AsteroidsConfigBar = ({ page, totalPages, onPageClick }) => {
     // debugger;
     return (
-        <Container className='p-3'>
+        <Container className='p-2 pe-3 m-1'>
             <Row
                 className='d-flex align-items-center pt-2 px-2 border-bottom border-3 rounded'
                 style={{ background: '#f2f2f2' }}
