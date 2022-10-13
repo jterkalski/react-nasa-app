@@ -43,11 +43,13 @@ const Asteroids = () => {
 
     return (
         <div className='pb-2'>
-            <AsteroidsConfigBar
-                page={page}
-                totalPages={totalPages}
-                onPageClick={handlePageClick}
-            />
+            {totalPages && (
+                <AsteroidsConfigBar
+                    page={page}
+                    totalPages={totalPages}
+                    onPageClick={handlePageClick}
+                />
+            )}
             {loading ? (
                 <Loader loading={loading} />
             ) : (
