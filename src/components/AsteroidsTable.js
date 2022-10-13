@@ -1,4 +1,5 @@
 import { Table } from 'react-bootstrap';
+import TooltipPositionedExample from './AsteroidsTooltip';
 
 const AsteroidsTable = ({ asteroidsData }) => {
     return (
@@ -7,7 +8,10 @@ const AsteroidsTable = ({ asteroidsData }) => {
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
-                    <th>Potentially hazardous object</th>
+                    <th>
+                        <span>Potentially hazardous object</span>
+                        <TooltipPositionedExample />
+                    </th>
                 </tr>
             </thead>
             <tbody>

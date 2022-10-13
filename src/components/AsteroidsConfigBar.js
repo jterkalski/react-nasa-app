@@ -6,7 +6,7 @@ const AsteroidsConfigBar = ({ page, totalPages, onPageClick }) => {
         <Container className='p-2'>
             <Row className='d-flex align-items-center pt-2'>
                 <Col>
-                    <h3>Asteroid data-set</h3>
+                    <h3>Asteroids data-set</h3>
                 </Col>
                 <Col>
                     <AsteroidsPagination
