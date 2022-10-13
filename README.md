@@ -1,4 +1,6 @@
-![app-logo](public/images/React-Nasa-App.png 'React-Nasa-App Banner')
+<p align="center">
+  <img src="public/images/React-Nasa-App.png" />
+</p>
 
 <p align="center">
   <a href="#basic-overview">Basic overview</a> •
