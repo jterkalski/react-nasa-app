@@ -20,7 +20,7 @@ const TooltipPositionedExample = () => {
                 src='./icons/info-circle.svg'
                 style={{
                     height: '14px',
-                    position: 'fixed',
+                    position: 'relative',
                     margin: '0 0 15px 5px',
                     cursor: 'pointer',
                 }}

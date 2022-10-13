@@ -6,8 +6,12 @@ const AsteroidsTable = ({ asteroidsData }) => {
         <Table striped bordered hover className='text-center'>
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Name</th>
+                    <th>
+                        <div className='m-1'>ID</div>
+                    </th>
+                    <th>
+                        <div className='m-1'>Name</div>
+                    </th>
                     <th>
                         <span>Potentially hazardous object</span>
                         <TooltipPositionedExample />
