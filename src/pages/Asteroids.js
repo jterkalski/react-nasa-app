@@ -8,8 +8,7 @@ import Loader from '../components/Loader';
 const Asteroids = () => {
     const [loading, setLoading] = useState(true);
     const [asteroidsData, setAsteroidsData] = useState();
-
-    const [totalPages, setTotalPages] = useState(10);
+    const [totalPages, setTotalPages] = useState();
     const [page, setPage] = useState(1);
 
     useEffect(() => {
@@ -27,7 +26,7 @@ const Asteroids = () => {
                 );
                 if (res?.status === 200) {
                     setAsteroidsData(res.data.near_earth_objects);
-                    // setTotalPages(res.data.page.total_pages);
+                    setTotalPages(res.data.page.total_pages);
                     setLoading(false);
                 }
             } catch (e) {
@@ -35,7 +34,7 @@ const Asteroids = () => {
             }
         };
         fetchAsteroids();
-    }, []); // [page]
+    }, [page]);
 
     const handlePageClick = (page) => {
         setPage(page);

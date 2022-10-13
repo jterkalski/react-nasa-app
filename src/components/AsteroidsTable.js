@@ -14,7 +14,11 @@ const AsteroidsTable = ({ asteroidsData }) => {
                 {asteroidsData.map((asteroid) => (
                     <tr key={asteroid.id}>
                         <td>{asteroid.id}</td>
-                        <td>{asteroid.name_limited}</td>
+                        <td>
+                            {asteroid.name_limited
+                                ? asteroid.name_limited
+                                : asteroid.name}
+                        </td>
                         <td>
                             {asteroid.is_potentially_hazardous_asteroid ? 'Yes' : 'No'}
                         </td>

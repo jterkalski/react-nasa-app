@@ -41,7 +41,11 @@ const HomeApod = () => {
             ) : (
                 <Card style={{ width: '30rem', maxWidth: '80vw' }}>
                     {isPicture ? (
-                        <Card.Img variant='top' src={data.url} />
+                        <Card.Img
+                            variant='top'
+                            src={data.url}
+                            style={{ maxHeight: '50vh' }}
+                        />
                     ) : (
                         <div>Today's picture is actually a video</div>
                     )}

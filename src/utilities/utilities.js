@@ -16,3 +16,22 @@ export const getIso8601Date = (date) => {
 
     return year + '-' + month + '-' + day;
 };
+
+// pagination range:
+export const calculateRange = (pageNumber, pagesCount, radiusSize) => {
+    const start = pageNumber - radiusSize;
+    if (start < 1) {
+        return {
+            start: 1,
+            stop: Math.min(2 * radiusSize + 1, pagesCount),
+        };
+    }
+    const stop = pageNumber + radiusSize;
+    if (stop > pagesCount) {
+        return {
+            start: Math.max(1, pagesCount - 2 * radiusSize),
+            stop: pagesCount,
+        };
+    }
+    return { start, stop };
+};
