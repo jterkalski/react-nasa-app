@@ -1,4 +1,3 @@
-import Button from 'react-bootstrap/Button';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
 
@@ -8,19 +7,18 @@ const tooltipText =
 const TooltipPositionedExample = () => {
     return (
         <OverlayTrigger
-            key='bottom'
-            placement='bottom'
+            key="bottom"
+            placement="bottom"
             overlay={
                 <Tooltip
                     id={`tooltip-bottom`}
-                    style={{ width: '150px', marginTop: '15px' }}
-                >
+                    style={{ width: '150px', marginTop: '15px' }}>
                     {tooltipText}
                 </Tooltip>
-            }
-        >
+            }>
             <img
-                src='./icons/info-circle.svg'
+                src="./icons/info-circle.svg"
+                alt="info-circle"
                 style={{
                     height: '14px',
                     position: 'relative',
