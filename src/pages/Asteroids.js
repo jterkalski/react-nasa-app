@@ -4,6 +4,7 @@ import AsteroidsTable from '../components/AsteroidsTable';
 import { apiKey } from '../data/data';
 import axios from 'axios';
 import Loader from '../components/Loader';
+import { Container } from 'react-bootstrap';
 
 const Asteroids = () => {
     const [loading, setLoading] = useState(true);
@@ -41,7 +42,7 @@ const Asteroids = () => {
     };
 
     return (
-        <div className='pb-2'>
+        <Container className="pb-2">
             {totalPages && (
                 <AsteroidsConfigBar
                     page={page}
@@ -56,7 +57,7 @@ const Asteroids = () => {
                     <AsteroidsTable asteroidsData={asteroidsData} />
                 </div>
             )}
-        </div>
+        </Container>
     );
 };
 
