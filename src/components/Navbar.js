@@ -1,33 +1,20 @@
-import {
-    Container,
-    Nav,
-    Navbar as NavbarBs,
-    NavDropdown,
-} from 'react-bootstrap';
+import { Container, Nav, Navbar as NavbarBs, NavDropdown } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <NavbarBs bg="dark" variant="dark">
+        <NavbarBs bg='dark' variant='dark'>
             <Container>
-                <NavbarBs.Brand to="/" as={NavLink}>
-                    <img src="./orbit.svg" alt="orbit-logo" />
+                <NavbarBs.Brand to='/' as={NavLink}>
+                    <img src='./orbit.svg' alt='orbit-logo' />
                 </NavbarBs.Brand>
-                <Nav className="me-auto">
-                    <Nav.Link to="/apod" as={NavLink} className="ms-2 m-auto">
+                <Nav className='me-auto'>
+                    <Nav.Link to='/apod' as={NavLink} className='ms-2 m-auto'>
                         Astronomy Picture of the Day
                     </Nav.Link>
-                    <NavDropdown
-                        id="nav-dropdown-dark-example"
-                        title="Asteroids"
-                        menuVariant="dark">
-                        <NavDropdown.Item href="/asteroids">
-                            Browse
-                        </NavDropdown.Item>
-                        <NavDropdown.Item href="/asteroids_search">
-                            Search by date
-                        </NavDropdown.Item>
-                    </NavDropdown>
+                    <Nav.Link to='/asteroids' as={NavLink} className='ms-2 m-auto'>
+                        Asteroids
+                    </Nav.Link>
                 </Nav>
             </Container>
         </NavbarBs>
