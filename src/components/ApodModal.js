@@ -11,10 +11,10 @@ const ApodModal = ({ show, onHide }) => {
                 <ApodForm />
             </Modal.Body>
             <Modal.Footer>
+                <div className='me-3'>NOTE: This feature does not work yet.</div>
                 <Button variant='secondary' onClick={onHide}>
                     Close
                 </Button>
-                <Button variant='primary'>Confirm</Button>
             </Modal.Footer>
         </Modal>
     );
